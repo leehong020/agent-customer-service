@@ -69,16 +69,16 @@ class VectorStoreService:
             if check_md5_hex(md5_hex):
                 logger.info(f"文件已经存储过向量数据库了，跳过文件: {path}")
                 continue
-            documents = get_file_documents(path)
-            if not documents:
-                logger.warning(f"文件没有解析出文档，跳过文件: {path}")
-                continue
-            self.vector_store.add_documents(documents)
-            save_md5_hex(md5_hex)
-            logger.info(f"成功将文件存储到向量数据库: {path}")
+            # documents = get_file_documents(path)
+            # if not documents:
+            #     logger.warning(f"文件没有解析出文档，跳过文件: {path}")
+            #     continue
+            # self.vector_store.add_documents(documents)
+            # save_md5_hex(md5_hex)
+            # logger.info(f"成功将文件存储到向量数据库: {path}")
 
             try:
-                documents = list[Document] = get_file_documents(path)
+                documents: list[Document] = get_file_documents(path)
 
                 if not documents:
                     logger.warning(f"文件没有解析出文档，跳过文件: {path}")
@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
     retriever = vs.get_retriever()
 
-    res = retriever.invoke("请总结一下这个文件的内容")
+    res = retriever.invoke("迷路")
     for r in res:
         print(r.page_content)
         print("-"*20)

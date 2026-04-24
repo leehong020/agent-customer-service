@@ -7,3 +7,38 @@
 2026-04-24 12:11:17,679 - agent - ERROR - prompt_loader.py:17 - 解析系统主提示词失败: /home/lee/agent-customer-service/prompts/main_prompt.txt, 错误信息: [Errno 2] No such file or directory: '/home/lee/agent-customer-service/prompts/main_prompt.txt'
 2026-04-24 12:14:39,239 - agent - ERROR - prompt_loader.py:29 - RAG提示词路径配置缺失: 'rag_summerize_prompt_path'
 2026-04-24 12:16:07,219 - agent - ERROR - prompt_loader.py:29 - RAG提示词路径配置缺失: 'rag_summerize_prompt_path'
+2026-04-24 15:31:44,541 - agent - INFO - vector_strore.py:78 - 成功将文件存储到向量数据库: data/扫拖一体机器人100问.txt
+2026-04-24 15:31:44,542 - agent - ERROR - vector_strore.py:101 - 处理文件失败: data/扫拖一体机器人100问.txt, 错误信息: 'type' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/lee/agent-customer-service/rag/vector_strore.py", line 81, in load_document
+    documents = list[Document] = get_file_documents(path)
+TypeError: 'type' object does not support item assignment
+2026-04-24 15:32:06,817 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫拖一体机器人100问.txt
+2026-04-24 15:32:08,047 - agent - INFO - vector_strore.py:78 - 成功将文件存储到向量数据库: data/扫地机器人100问.pdf
+2026-04-24 15:32:08,183 - agent - ERROR - vector_strore.py:101 - 处理文件失败: data/扫地机器人100问.pdf, 错误信息: 'type' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/lee/agent-customer-service/rag/vector_strore.py", line 81, in load_document
+    documents = list[Document] = get_file_documents(path)
+TypeError: 'type' object does not support item assignment
+2026-04-24 15:32:09,391 - agent - INFO - vector_strore.py:78 - 成功将文件存储到向量数据库: data/扫地机器人100问2.txt
+2026-04-24 15:32:09,391 - agent - ERROR - vector_strore.py:101 - 处理文件失败: data/扫地机器人100问2.txt, 错误信息: 'type' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/lee/agent-customer-service/rag/vector_strore.py", line 81, in load_document
+    documents = list[Document] = get_file_documents(path)
+TypeError: 'type' object does not support item assignment
+2026-04-24 15:32:10,696 - agent - INFO - vector_strore.py:78 - 成功将文件存储到向量数据库: data/选购指南.txt
+2026-04-24 15:32:10,697 - agent - ERROR - vector_strore.py:101 - 处理文件失败: data/选购指南.txt, 错误信息: 'type' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/lee/agent-customer-service/rag/vector_strore.py", line 81, in load_document
+    documents = list[Document] = get_file_documents(path)
+TypeError: 'type' object does not support item assignment
+2026-04-24 15:33:30,302 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫拖一体机器人100问.txt
+2026-04-24 15:33:30,302 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫地机器人100问.pdf
+2026-04-24 15:33:30,302 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫地机器人100问2.txt
+2026-04-24 15:33:30,303 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/选购指南.txt
+2026-04-24 15:35:43,249 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫拖一体机器人100问.txt
+2026-04-24 15:35:43,249 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫地机器人100问.pdf
+2026-04-24 15:35:43,249 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/扫地机器人100问2.txt
+2026-04-24 15:35:43,249 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/选购指南.txt
+2026-04-24 15:35:50,207 - agent - INFO - vector_strore.py:98 - 成功将文件存储到向量数据库: data/故障排除.txt
+2026-04-24 15:35:54,418 - agent - INFO - vector_strore.py:98 - 成功将文件存储到向量数据库: data/维护保养.txt

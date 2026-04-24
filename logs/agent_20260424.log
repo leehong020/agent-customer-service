@@ -1,0 +1,9 @@
+2026-04-24 10:47:10,435 - agent - DEBUG - logger_handler.py:51 - 这是一个调试日志
+2026-04-24 10:47:10,435 - agent - INFO - logger_handler.py:52 - 这是一个信息日志
+2026-04-24 10:47:10,435 - agent - WARNING - logger_handler.py:53 - 这是一个警告日志
+2026-04-24 10:47:10,435 - agent - ERROR - logger_handler.py:54 - 这是一个错误日志
+2026-04-24 10:47:10,435 - agent - CRITICAL - logger_handler.py:55 - 这是一个严重错误日志
+2026-04-24 12:10:52,988 - agent - ERROR - prompt_loader.py:17 - 解析系统主提示词失败: /home/lee/agent-customer-service/prompts/main_prompt.txt, 错误信息: [Errno 2] No such file or directory: '/home/lee/agent-customer-service/prompts/main_prompt.txt'
+2026-04-24 12:11:17,679 - agent - ERROR - prompt_loader.py:17 - 解析系统主提示词失败: /home/lee/agent-customer-service/prompts/main_prompt.txt, 错误信息: [Errno 2] No such file or directory: '/home/lee/agent-customer-service/prompts/main_prompt.txt'
+2026-04-24 12:14:39,239 - agent - ERROR - prompt_loader.py:29 - RAG提示词路径配置缺失: 'rag_summerize_prompt_path'
+2026-04-24 12:16:07,219 - agent - ERROR - prompt_loader.py:29 - RAG提示词路径配置缺失: 'rag_summerize_prompt_path'

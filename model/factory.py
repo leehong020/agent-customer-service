@@ -4,7 +4,7 @@ from typing import Optional
 from langchain_core.embeddings import Embeddings
 from langchain_community.chat_models.tongyi import BaseChatModel
 from langchain_community.chat_models.tongyi import ChatTongyi
-from langchain_core.embeddings import DashScopeEmbeddings
+from langchain_community.embeddings import DashScopeEmbeddings
 from utils.config_handler import rag_conf
 class BaseModelFactory(ABC):
     @abstractmethod

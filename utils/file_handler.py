@@ -1,21 +1,21 @@
 import os,hashlib
-from path_tool import get_abs_path
-from logger_handler import logger
-from langchain.document_loaders import PyPDFLoader, TextLoader
-from langchain_core.document import Document    
+from utils.path_tool import get_abs_path
+from utils.logger_handler import logger
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
+from langchain_core.documents import Document    
 def get_file_md5_hex(file_path: str):
     if not os.path.exists(file_path):
         logger.error(f"md5计算文件不存在: {file_path}")
 
     if not os.path.isfile(file_path):
         logger.error(f"md5计算路径不是文件: {file_path}")
-    md5 = hashlib.md5()
+    md5_obj = hashlib.md5()
 
     #文档分块读取，避免大文件占用过多内存
     chunk_size = 4096
     try:
         with open(file_path, 'rb') as f:
-            while chunk := f.read(chunk_size)
+            while chunk := f.read(chunk_size):
                 md5_obj.update(chunk)
             """
             chunk = f.read(chunk_size)
@@ -42,7 +42,7 @@ def listdir_with_allowed_type(path: str, allowed_types: tuple[str]):
     for f in os.listdir(path):
         if f.endswith(allowed_types):
             files.append(os.path.join(path, f))
-    return tuples(files)
+    return tuple(files)
 
 def pdf_loader(file_path:str,passwd = None) -> list[Document]:
     return PyPDFLoader(file_path, passwd).load()

@@ -6,7 +6,7 @@ import os
 from utils.path_tool import get_abs_path    
 from utils.file_handler import pdf_loader, txt_loader, listdir_with_allowed_type, get_file_md5_hex
 from utils.logger_handler import logger
-from langchain_core.document import Document 
+from langchain_core.documents import Document 
 
 
 class VectorStoreService:
@@ -27,7 +27,7 @@ class VectorStoreService:
     def get_retriever(self):
         return self.vector_store.as_retriever(search_kwargs={"k": chroma_conf["k"]})
     
-    def load_document(self, documents:list[str]):
+    def load_document(self, documents:list[str] | None = None):
         """
         从数据文件夹里面读取数据文件，转为向量存入向量数据库
         要计算文件的md5值，判断是否已经存入过向量数据库，避免重复存储
@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
     retriever = vs.get_retriever()
 
-    res = retriever.invoke("请总结一下这个文件的内容", search_type="mmr")
+    res = retriever.invoke("请总结一下这个文件的内容")
     for r in res:
         print(r.page_content)
         print("-"*20)

@@ -81,7 +81,7 @@ def generate_external_data():
                     "耗材": consumables,
                     "对比": comparison
                 }
-# @tool(description="从外部系统中获取用户的使用记录，以纯字符串的形式返回，如果未检测到返回空字符串")
+@tool(description="从外部系统中获取用户的使用记录，以纯字符串的形式返回，如果未检测到返回空字符串")
 def fetch_external_data(user_id: str, month: str) -> str:
     generate_external_data()
     try:
@@ -90,5 +90,8 @@ def fetch_external_data(user_id: str, month: str) -> str:
         logger.warning(f"未检测到用户的使用记录，user_id: {user_id}, month: {month}")
         return ""
     
+@tool(description="无入参，无返回值，调用后处罚中间件自动为报告生成的场景动态注入上下文信息，为后续提示词切换提供上下文信息")
+def fill_context_for_report():
+    return "fill_context_for_report工具被调用"
 if __name__ == "__main__":
     print(fetch_external_data("1005", "2025-06"))

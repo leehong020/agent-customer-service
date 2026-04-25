@@ -42,3 +42,85 @@ TypeError: 'type' object does not support item assignment
 2026-04-24 15:35:43,249 - agent - INFO - vector_strore.py:70 - 文件已经存储过向量数据库了，跳过文件: data/选购指南.txt
 2026-04-24 15:35:50,207 - agent - INFO - vector_strore.py:98 - 成功将文件存储到向量数据库: data/故障排除.txt
 2026-04-24 15:35:54,418 - agent - INFO - vector_strore.py:98 - 成功将文件存储到向量数据库: data/维护保养.txt
+2026-04-24 22:05:24,077 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 22:05:24,077 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 请帮我生成一份6月份的使用报告，内容包括使用效率、使用特征、耗材使用情况和与5月份的对比情况
+2026-04-24 22:05:41,727 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 22:05:41,727 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 请帮我生成一份6月份的使用报告，内容包括使用效率、使用特征、耗材使用情况和与5月份的对比情况
+2026-04-24 22:05:43,865 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: get_user_id, 输入参数: {}
+2026-04-24 22:05:43,865 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: get_user_id
+2026-04-24 22:05:43,866 - agent - INFO - middleware.py:36 - 模型调用监控: 带有3条消息
+2026-04-24 22:05:43,866 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 1008
+2026-04-24 22:05:45,596 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: fill_context_for_report, 输入参数: {}
+2026-04-24 22:05:45,596 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: fill_context_for_report
+2026-04-24 22:05:45,596 - agent - INFO - middleware.py:36 - 模型调用监控: 带有5条消息
+2026-04-24 22:05:45,596 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage fill_context_for_report工具被调用
+2026-04-24 22:05:48,473 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: fetch_external_data, 输入参数: {'user_id': '1008', 'month': '2025-06'}
+2026-04-24 22:05:48,474 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: fetch_external_data
+2026-04-24 22:05:48,474 - agent - INFO - middleware.py:36 - 模型调用监控: 带有7条消息
+2026-04-24 22:05:48,474 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage {"特征": "100㎡三居 | 三口之家 | 大理石", "效率": "覆盖率:86%\\n餐桌区域漏扫:1次/天\\n避障成功率:90%", "耗材": "主刷磨损:轻度\\n水箱加水:每日2次", "对比": "大理石地面清洁效果低于同类15%"}
+2026-04-24 22:05:51,174 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '大理石地面扫地机器人使用建议'}
+2026-04-24 22:05:53,083 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:05:53,084 - agent - INFO - middleware.py:36 - 模型调用监控: 带有9条消息
+2026-04-24 22:05:53,084 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 在大理石地面使用扫地机器人时，拖地后应及时清理机器人底部水渍，并每月对拖布支架进行除垢，防止水垢附着。
+2026-04-24 22:05:55,194 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人主刷保养方法'}
+2026-04-24 22:06:00,060 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:06:00,061 - agent - INFO - middleware.py:36 - 模型调用监控: 带有11条消息
+2026-04-24 22:06:00,061 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 每次清扫完成后立即清理主刷上的毛发和线头，用剪刀剪断缠绕物，切勿强行拉扯；每周拆解主刷滚刷仓，用软毛刷清理内部灰尘和毛发；若主刷出现打滑，检查滚刷胶条是否磨损并及时清洁或更换；在长毛地毯清扫后需立即清理主刷上的纤维；每月检查主刷电机是否异常发热或异响；清理时注意保护滚刷两端轴承，避免进水进灰导致卡顿。
+2026-04-24 22:06:02,553 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人餐桌区域漏扫解决方案'}
+2026-04-24 22:06:06,010 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:06:06,011 - agent - INFO - middleware.py:36 - 模型调用监控: 带有13条消息
+2026-04-24 22:06:06,011 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 针对扫地机器人餐桌区域漏扫问题，可参考以下解决方案：检查地图是否完整，重新建图；确认是否开启边界清扫或沿边清扫模式，若未开启则启用；检查边刷是否磨损，必要时更换；清洁沿边传感器上的灰尘；确保机器人电量充足后再进行清扫。
+2026-04-24 22:07:03,570 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 22:07:03,570 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 请帮我生成一份6月份的使用报告，内容包括使用效率、使用特征、耗材使用情况和与5月份的对比情况
+2026-04-24 22:07:06,005 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: get_user_id, 输入参数: {}
+2026-04-24 22:07:06,006 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: get_user_id
+2026-04-24 22:07:06,006 - agent - INFO - middleware.py:36 - 模型调用监控: 带有3条消息
+2026-04-24 22:07:06,006 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 1007
+2026-04-24 22:07:08,741 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: fill_context_for_report, 输入参数: {}
+2026-04-24 22:07:08,741 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: fill_context_for_report
+2026-04-24 22:07:08,741 - agent - INFO - middleware.py:36 - 模型调用监控: 带有5条消息
+2026-04-24 22:07:08,742 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage fill_context_for_report工具被调用
+2026-04-24 22:07:10,963 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: fetch_external_data, 输入参数: {'user_id': '1007', 'month': '2025-06'}
+2026-04-24 22:07:10,964 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: fetch_external_data
+2026-04-24 22:07:10,965 - agent - INFO - middleware.py:36 - 模型调用监控: 带有7条消息
+2026-04-24 22:07:10,965 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage {"特征": "55㎡一居 | 独居 | 复合地板", "效率": "覆盖率:90%\\n日均清扫:35㎡\\n沿边清扫无死角", "耗材": "滤网寿命:剩余80天\\n尘盒清理:每5天", "对比": "清洁效率优于70%小户型用户"}
+2026-04-24 22:07:13,014 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: fetch_external_data, 输入参数: {'user_id': '1007', 'month': '2025-05'}
+2026-04-24 22:07:13,015 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: fetch_external_data
+2026-04-24 22:07:13,015 - agent - INFO - middleware.py:36 - 模型调用监控: 带有9条消息
+2026-04-24 22:07:13,015 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage {"特征": "55㎡一居 | 独居 | 复合地板", "效率": "覆盖率:94%\\n日均清扫:39㎡\\n无漏扫区域", "耗材": "滤网寿命:剩余60天\\n尘盒清理:每5天", "对比": "清洁效率优于85%小户型用户"}
+2026-04-24 22:07:17,012 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人滤网保养和清洁效率优化'}
+2026-04-24 22:07:19,266 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:07:19,267 - agent - INFO - middleware.py:36 - 模型调用监控: 带有11条消息
+2026-04-24 22:07:19,267 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 扫地机器人滤网需定期清洗或更换，若滤网过脏会导致吸力不足、地面残留细小灰尘；建议使用原装滤网以确保清洁效果和设备正常运行。
+2026-04-24 22:07:21,106 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人使用频率与清洁效果关系'}
+2026-04-24 22:07:24,571 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:07:24,572 - agent - INFO - middleware.py:36 - 模型调用监控: 带有13条消息
+2026-04-24 22:07:24,572 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 参考资料未直接说明扫地机器人使用频率与清洁效果的关系，仅提及不同环境下需根据使用情况调整维护频次，如宠物家庭每次清扫后需全面清理，短毛地毯环境每周清理边缘灰尘，水泥地环境减少拖地频次以防灰尘结块。
+2026-04-24 22:09:58,618 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 22:09:58,618 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 扫地机器人在我所在的地区气温下应该如何保养
+2026-04-24 22:10:01,363 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: get_user_location, 输入参数: {}
+2026-04-24 22:10:01,363 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: get_user_location
+2026-04-24 22:10:01,364 - agent - INFO - middleware.py:36 - 模型调用监控: 带有3条消息
+2026-04-24 22:10:01,364 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 上海
+2026-04-24 22:10:04,023 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: get_weather, 输入参数: {'city': '上海'}
+2026-04-24 22:10:04,023 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: get_weather
+2026-04-24 22:10:04,023 - agent - INFO - middleware.py:36 - 模型调用监控: 带有5条消息
+2026-04-24 22:10:04,023 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 上海的天气是晴天，温度25度。
+2026-04-24 22:10:07,089 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人在25度晴天环境下的保养方法'}
+2026-04-24 22:10:10,414 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 22:10:10,415 - agent - INFO - middleware.py:36 - 模型调用监控: 带有7条消息
+2026-04-24 22:10:10,415 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 在25度晴天环境下，扫地机器人使用后应及时用干软布擦拭机身外壳，清理防撞条缝隙中的毛发和线头；若涉及拖地功能，需清理轮组可能沾附的泥沙，并保持环境通风。
+2026-04-24 23:16:20,213 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 23:16:20,213 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 你好
+2026-04-24 23:16:41,602 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 23:16:41,603 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 有哪些扫地机器人推荐
+2026-04-24 23:16:43,008 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '扫地机器人推荐 选购指南'}
+2026-04-24 23:16:53,460 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 23:16:53,461 - agent - INFO - middleware.py:36 - 模型调用监控: 带有3条消息
+2026-04-24 23:16:53,461 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 选购扫地机器人应优先明确使用场景。核心参数包括导航类型（激光导航定位精准，适合复杂户型；视觉导航性价比高但需避免强光）、吸力（家用建议≥3000Pa，地毯场景需≥4000Pa）、电池容量（大户型建议>5200mAh）、尘盒/水箱容量（宠物家庭尘盒≥600ml，大户型清水箱≥300ml）。有宠物或长发家庭应选胶刷或防缠绕主刷、大吸力机型；地毯多的家庭需确认自动增压和地毯识别功能。避障能力方面，3D结构光优于红外，可有效避开细小障碍物。拖地功能优选电动旋转拖布+热风烘干（温度≥50℃），避免发霉异味。品牌上，科沃斯创新性强，石头算法稳定，小米生态链产品性价比高、维护成本低。高端机型适合追求自动化与免维护体验的用户，不推荐购买二手。其他关注点包括：机身高度≤7.5cm以进入低矮空间、HEPA H13级及以上滤网、支持断点续扫与多楼层地图、APP功能完善（分区清扫、禁区设置等）、整机保修≥2年。预算3000元内可选基础激光导航+旋转拖布款，5000元以上可考虑自动集尘+热风烘干机型。
+2026-04-24 23:17:22,757 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-24 23:17:22,757 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage 请给我推荐一款2000元左右的扫地机器人
+2026-04-24 23:17:24,208 - agent - INFO - middleware.py:19 - 工具调用监控: 工具名称: rag_summarize, 输入参数: {'query': '2000元价位扫地机器人推荐'}
+2026-04-24 23:17:26,896 - agent - INFO - middleware.py:22 - 工具调用成功: 工具名称: rag_summarize
+2026-04-24 23:17:26,897 - agent - INFO - middleware.py:36 - 模型调用监控: 带有3条消息
+2026-04-24 23:17:26,897 - agent - DEBUG - middleware.py:37 - [log_before_model] ToolMessage 参考资料中未提及2000元价位的具体扫地机器人型号推荐。但指出小米生态链产品性价比高，适合小户型的基础激光导航机型如米家1C、石头T4可作为参考；选购时应关注导航类型、吸力、电池容量等参数。

@@ -1,0 +1,2 @@
+2026-04-25 12:02:53,951 - agent - INFO - middleware.py:36 - 模型调用监控: 带有1条消息
+2026-04-25 12:02:53,951 - agent - DEBUG - middleware.py:37 - [log_before_model] HumanMessage hello ,你能干什么东西

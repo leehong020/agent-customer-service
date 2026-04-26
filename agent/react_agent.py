@@ -21,7 +21,7 @@ class ReactAgent:
         # 以流式的方式执行agent，stream_mode设置为"values"表示只返回工具调用的结果值，context中可以传入一些上下文信息，在工具调用和提示词生成的中间件中都可以访问到这些上下文信息
         for chunk in self.agent.stream(input_dict,stream_mode="values",context={"report":False}):
             latest_message = chunk["messages"][-1]
-            if latest_message.content:
+            if getattr(latest_message, "type", None) == "ai" and latest_message.content:
                 yield latest_message.content.strip() + "\n"
 
 if __name__ == "__main__":
